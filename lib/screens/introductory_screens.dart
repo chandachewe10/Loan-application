@@ -54,39 +54,90 @@ class IntroductoryScreens extends StatelessWidget {
       ),
       PageViewModel(
         title: "Quick and Easy Application.",
-
-        body:
-            "Say goodbye to lengthy forms. Our app's intuitive interface lets you complete your loan application in just a few minutes",
+        bodyWidget: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Complete your loan application in few minutes.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // On button pressed
+              },
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                minimumSize: const Size(200, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.circular(16), // Button border radius
+                ),
+              ),
+              child: const Text("Get Started!"),
+            )
+          ],
+        ),
         image: SvgPicture.asset('assets/images/introductory8.svg'),
         decoration: pageDecoration,
       ),
       PageViewModel(
         title: "Flexible Loan Options",
-        body:
-            "Tailor your loan to your needs. Choose from a range of flexible options, including loan amount and repayment terms.",
+        bodyWidget: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Choose from a range of flexible options.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // On button pressed
+              },
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                minimumSize: const Size(200, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.circular(16), // Button border radius
+                ),
+              ),
+              child: const Text("Get Started!"),
+            )
+          ],
+        ),
         image: SvgPicture.asset('assets/images/introductory6.svg'),
         decoration: pageDecoration,
       )
     ];
 
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+        backgroundColor: kPrimaryColor,
         body: Container(
-      margin: const EdgeInsets.all(30),
-      child: IntroductionScreen(
-        pages: listPagesViewModel,
-        back: const Icon(Icons.arrow_back),
-        showBackButton: true,
-        next: const Icon(Icons.arrow_forward),
-        showNextButton: true,
-        skip: const Text('Skip'),
-        showSkipButton: false,
-        done: const Text("Register"),
-        onDone: () {
-          // On button pressed
-        },
-        onSkip: () {},
-      ),
-    ));
+          margin: const EdgeInsets.all(30),
+          child: IntroductionScreen(
+            pages: listPagesViewModel,
+            back: const Icon(Icons.arrow_back),
+            showBackButton: true,
+            next: const Icon(Icons.arrow_forward),
+            showNextButton: true,
+            skip: const Text('Skip'),
+            showSkipButton: false,
+            done: const Text("Register"),
+            onDone: () {
+              // On button pressed
+            },
+            onSkip: () {},
+          ),
+        ));
   }
 }
