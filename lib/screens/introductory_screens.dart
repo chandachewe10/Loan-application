@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 import '../constants/colors.dart';
@@ -33,7 +35,7 @@ class IntroductoryScreens extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // On button pressed
+                Get.toNamed('/signup');
               },
               style: ElevatedButton.styleFrom(
                 padding:
@@ -136,9 +138,11 @@ class IntroductoryScreens extends StatelessWidget {
               "Login",
               style: TextStyle(color: Colors.white),
             ),
-            baseBtnStyle: TextButton.styleFrom(
-              backgroundColor: Colors.blue,
-            ),
+
+            doneStyle: TextButton.styleFrom(
+                backgroundColor: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16))),
             onDone: () {
               // On button pressed
             },
