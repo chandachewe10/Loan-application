@@ -127,12 +127,18 @@ class IntroductoryScreens extends StatelessWidget {
           child: IntroductionScreen(
             pages: listPagesViewModel,
             back: const Icon(Icons.arrow_back),
-            showBackButton: true,
+            showBackButton: false,
             next: const Icon(Icons.arrow_forward),
             showNextButton: true,
             skip: const Text('Skip'),
-            showSkipButton: false,
-            done: const Text("Register"),
+            showSkipButton: true,
+            done: const Text(
+              "Login",
+              style: TextStyle(color: Colors.white),
+            ),
+            baseBtnStyle: TextButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
             onDone: () {
               // On button pressed
             },
