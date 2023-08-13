@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../widgets/header.dart';
+import '../components/header.dart';
 import '../widgets/personal_details.dart';
 
 class SignUp extends StatelessWidget {
