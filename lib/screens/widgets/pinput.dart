@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:pinput/pinput.dart';
 
 import '../../constants/colors.dart';
@@ -55,7 +57,10 @@ class PinPut extends StatelessWidget {
               closeKeyboardWhenCompleted: true,
               length: 4,
               showCursor: true,
-              onCompleted: (pin) => print(pin),
+              onCompleted: (pin) =>
+                  Get.toNamed('/password')
+
+                  //print(pin),
             ),
             const SizedBox(
               height: 25,
