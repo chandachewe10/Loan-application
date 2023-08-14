@@ -9,7 +9,7 @@ import 'controller.dart';
 class OtpDetailsDetailsPageBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put<OtpDetails>(OtpDetails());
+    Get.put<OtpDetailsController>(OtpDetailsController());
 
   }
 }

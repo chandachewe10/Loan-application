@@ -23,16 +23,15 @@ class PasswordAccountDetails extends StatelessWidget {
             child: const InputForm(
                 prefixIcon: Icons.lock,
                 labelText: "Enter Password",
-                isPassword:true,
+                isPassword: true,
                 textInputType: TextInputType.visiblePassword)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
                 prefixIcon: Icons.lock,
                 labelText: "Confirm Password",
-                isPassword:true,
-                textInputType: TextInputType.text)),
-
+                isPassword: true,
+                textInputType: TextInputType.visiblePassword)),
         Container(
           margin: const EdgeInsets.all(15),
           child: ElevatedButton(

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class OtpDetails {
+class OtpDetailsController {
 
 
  var isVisible  = false.obs;

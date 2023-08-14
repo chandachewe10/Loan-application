@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../components/header.dart';
-import '../widgets/personal_details.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-class PersonalDetails extends StatelessWidget {
+import '../../components/header.dart';
+import '../../widgets/personal_details.dart';
+import 'controller.dart';
+
+
+class PersonalDetails extends GetView<PersonalDetailsController> {
   const PersonalDetails({super.key});
 
   @override

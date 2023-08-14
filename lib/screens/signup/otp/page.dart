@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../components/header.dart';
-import '../widgets/pinput.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
+import '../../components/header.dart';
+import '../../widgets/pinput.dart';
+import 'controller.dart';
 
-class Otp extends StatelessWidget {
+
+class Otp extends GetView<OtpDetailsController> {
   const Otp({super.key});
 
   @override
