@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:loan_mobile_app/screens/dashboard/page.dart';
 import 'package:loan_mobile_app/screens/introductory_screens.dart';
 import 'package:loan_mobile_app/screens/signin/page.dart';
 import 'package:loan_mobile_app/screens/signup/Passwords/page.dart';
@@ -42,6 +43,12 @@ class LoanMobileApplication extends StatelessWidget {
           GetPage(
             name: '/signin',
             page: () => const SigninDetailsCreation(),
+            // binding: SignupDetailsPageBinding(),
+          ),
+
+          GetPage(
+            name: '/dashboard',
+            page: () => const DashboardDetails(),
             // binding: SignupDetailsPageBinding(),
           ),
         ]);

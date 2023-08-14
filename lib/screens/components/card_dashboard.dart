@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CardStatus extends StatelessWidget {
+class CardDashboard extends StatelessWidget {
   final String title;
   final String hint;
   final IconData cardLogo;
   final String bottomText;
 
-  const CardStatus(
+  const CardDashboard(
       {super.key,
       required this.title,
       required this.hint,
