@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:loan_mobile_app/screens/introductory_screens.dart';
-import 'package:loan_mobile_app/screens/signup/page.dart';
+import 'package:loan_mobile_app/screens/otp/page.dart';
+import 'package:loan_mobile_app/screens/personal_details/page.dart';
+
 
 
 void main() {
@@ -22,9 +24,15 @@ class LoanMobileApplication extends StatelessWidget {
         // Named Routes and Bindings
         getPages: [
           GetPage(
-            name: '/signup',
-            page: () => SignUp(),
+            name: '/personal_details',
+            page: () => PersonalDetails(),
            // binding: SignupDetailsPageBinding(),
+          ),
+
+          GetPage(
+            name: '/otp',
+            page: () => const Otp(),
+            // binding: SignupDetailsPageBinding(),
           ),
         ]);
   }

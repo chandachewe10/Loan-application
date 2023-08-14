@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../components/input_form.dart';
 
-class PersonalDetails extends StatelessWidget {
-  const PersonalDetails({super.key});
+class NameDetails extends StatelessWidget {
+  const NameDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,24 +21,21 @@ class PersonalDetails extends StatelessWidget {
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
-              prefixIcon: Icons.account_circle_outlined,
-              labelText: "Enter First Name",
-              textInputType: TextInputType.text
-            )),
+                prefixIcon: Icons.account_circle_outlined,
+                labelText: "Enter First Name",
+                textInputType: TextInputType.text)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
-              prefixIcon: Icons.account_circle,
-              labelText: "Enter Last Name",
-              textInputType: TextInputType.text
-            )),
+                prefixIcon: Icons.account_circle,
+                labelText: "Enter Last Name",
+                textInputType: TextInputType.text)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
-              prefixIcon: Icons.email,
-              labelText: "Enter Email",
-              textInputType: TextInputType.emailAddress
-            )),
+                prefixIcon: Icons.email,
+                labelText: "Enter Email",
+                textInputType: TextInputType.emailAddress)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
@@ -48,17 +46,16 @@ class PersonalDetails extends StatelessWidget {
         Container(
           margin: const EdgeInsets.all(15),
           child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
-              elevation: 8,
-              minimumSize: const Size(200, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16)
-              )
-            ),
-              onPressed: (){}, child: Text('Next')
-
-          ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  elevation: 8,
+                  minimumSize: const Size(200, 50),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16))),
+              onPressed: () {
+                Get.toNamed('/otp');
+              },
+              child: const Text('Next')),
         )
       ],
     );

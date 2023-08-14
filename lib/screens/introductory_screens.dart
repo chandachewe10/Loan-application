@@ -35,7 +35,7 @@ class IntroductoryScreens extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Get.toNamed('/signup');
+                Get.toNamed('/personal_details');
               },
               style: ElevatedButton.styleFrom(
                 padding:

@@ -42,6 +42,8 @@ dependencies:
   lottie: ^2.5.0
   google_fonts: ^5.1.0
   introduction_screen: ^3.1.11
+  pinput: ^3.0.0
+  circular_countdown_timer: ^0.2.3
 
 
 dev_dependencies:
