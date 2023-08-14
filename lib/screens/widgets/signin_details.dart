@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:loan_mobile_app/constants/colors.dart';
 
 import '../components/input_form.dart';
 
-class PasswordAccountDetails extends StatelessWidget {
-  const PasswordAccountDetails({super.key});
+class SigninAccountDetails extends StatelessWidget {
+  const SigninAccountDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +22,28 @@ class PasswordAccountDetails extends StatelessWidget {
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
-                prefixIcon: Icons.lock,
-                labelText: "Enter Password",
-                isPassword: true,
+                prefixIcon: Icons.phone,
+                labelText: "Enter Phone number",
+                isPassword: false,
                 textInputType: TextInputType.visiblePassword)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
                 prefixIcon: Icons.lock,
-                labelText: "Confirm Password",
+                labelText: "Enter Password",
                 isPassword: true,
                 textInputType: TextInputType.visiblePassword)),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text('Forgot password?',style: TextStyle(color:primaryColor800),),
+            Text('Already Registered?',style: TextStyle(color:primaryColor800),),
+          ],
+        ),
+
+
         Container(
-          margin: const EdgeInsets.all(15),
+          margin: const EdgeInsets.all(25),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -42,9 +52,9 @@ class PasswordAccountDetails extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16))),
               onPressed: () {
-                Get.toNamed('/signin');
+                Get.toNamed('/dashboard');
               },
-              child: const Text('Create Account')),
+              child: const Text('Sign In')),
         )
       ],
     );

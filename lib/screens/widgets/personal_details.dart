@@ -42,7 +42,7 @@ class NameDetails extends StatelessWidget {
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
-              prefixIcon: Icons.phone_android_sharp,
+              prefixIcon: Icons.phone,
               labelText: "Enter Phone Number",
               isPassword:false,
               textInputType: TextInputType.number,

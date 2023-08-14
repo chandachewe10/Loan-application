@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:loan_mobile_app/screens/introductory_screens.dart';
 import 'package:loan_mobile_app/screens/signin/page.dart';
+import 'package:loan_mobile_app/screens/signup/Passwords/page.dart';
 import 'package:loan_mobile_app/screens/signup/otp/page.dart';
 import 'package:loan_mobile_app/screens/signup/personal_details/page.dart';
 
@@ -37,6 +38,13 @@ class LoanMobileApplication extends StatelessWidget {
             page: () => const PasswordDetailsCreation(),
             // binding: SignupDetailsPageBinding(),
           ),
+
+          GetPage(
+            name: '/signin',
+            page: () => const SigninDetailsCreation(),
+            // binding: SignupDetailsPageBinding(),
+          ),
         ]);
   }
 }
+
