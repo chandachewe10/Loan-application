@@ -23,24 +23,28 @@ class NameDetails extends StatelessWidget {
             child: const InputForm(
                 prefixIcon: Icons.account_circle_outlined,
                 labelText: "Enter First Name",
+                isPassword:false,
                 textInputType: TextInputType.text)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
                 prefixIcon: Icons.account_circle,
                 labelText: "Enter Last Name",
+                isPassword:false,
                 textInputType: TextInputType.text)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
                 prefixIcon: Icons.email,
                 labelText: "Enter Email",
+                isPassword:false,
                 textInputType: TextInputType.emailAddress)),
         Container(
             margin: const EdgeInsets.all(15),
             child: const InputForm(
               prefixIcon: Icons.phone_android_sharp,
               labelText: "Enter Phone Number",
+              isPassword:false,
               textInputType: TextInputType.number,
             )),
         Container(
