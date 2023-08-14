@@ -13,7 +13,7 @@ class SigninDetailsCreation extends GetView<SigninDetailsCreation> {
   Widget build(BuildContext context) {
     return  const Scaffold(
 
-      appBar: HeaderComponent(headerText: 'Sign In', hint: 'Enter your Credentials',),
+      appBar: HeaderComponent(headerText: 'Sign In', hint: 'Enter your Credentials to Log In into your Account',),
 
       body: SigninAccountDetails(),
     );
