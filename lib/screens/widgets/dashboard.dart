@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:loan_mobile_app/constants/colors.dart';
 
 class DashboardCard extends StatelessWidget {
-  final String image;
+  final IconData icon;
   final String title;
 
-  DashboardCard({required this.image, required this.title});
+  DashboardCard({required this.icon, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,12 @@ class DashboardCard extends StatelessWidget {
           aspectRatio: 1,
           child: Container(
             decoration: const ShapeDecoration(
-              color: primaryColor500,
+              color: primaryColor400,
               shape: OvalBorder(),
             ),
             child: Center(
-                child: Image.asset(image)
+                child: Icon(icon,
+                color: Colors.white,)
             ),
           ),
         ),
@@ -38,7 +39,7 @@ class DashboardCard extends StatelessWidget {
     title,
     textAlign: TextAlign.center,
     style: const TextStyle(
-    color: kPrimaryColor,
+    color: primaryColor400,
     fontSize: 14,
     fontWeight: FontWeight.w600,
     ),

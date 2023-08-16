@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:loan_mobile_app/constants/colors.dart';
 
+import '../components/header.dart';
 import '../widgets/dashboard.dart';
 import 'controller.dart';
 
@@ -13,18 +14,15 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
   Widget build(BuildContext context) {
     const String title = "Quick Financials";
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(title),
-        centerTitle: true,
-        backgroundColor: primaryColor800,
-        elevation: 4,
-      ),
-      drawer: Drawer(
+      appBar: const HeaderComponent(headerText: 'Financial CashExpress', hint: 'Dashboard',),
+
+
+       drawer: Drawer(
         width: 250,
         child: ListView(
           children: [
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               color: primaryColor800,
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -95,40 +93,54 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
           ],
         ),
       ),
-      body: Column(children: [
-        Container(
-          margin: const EdgeInsets.all(50),
-          child: const Text(
-            "Hi Chanda Chewe Welcome to the Clients Dashboard",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+
+          Container(
+            margin: const EdgeInsets.all(50),
+            child: const Text(
+              "Hi Chanda Chewe Welcome to the Clients Dashboard",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+            ),
           ),
-        ),
 
-        GridView.count(
-          shrinkWrap: true, // use it
-          crossAxisCount: 2,
-          children: [
-            DashboardCard(
-              image: 'assets/images/user1.png',
-              title: 'My Profile',
-            ),
-            DashboardCard(
-              image: 'assets/images/user1.png',
-              title: 'My Profile',
-            ),
-            DashboardCard(
-              image: 'assets/images/file1.jpg',
-              title: 'Loan Applications',
-            ),
-            DashboardCard(
-              image: 'assets/images/money1.png',
-              title: 'Transactions',
-            ),
+          GridView.count(
+            shrinkWrap: true, // use it
+            crossAxisCount: 3,
+            children: [
+              DashboardCard(
+                icon: Icons.account_circle,
+                title: 'My Profile',
+              ),
+              DashboardCard(
+                icon: Icons.file_copy,
+                title: 'My Profile',
+              ),
+              DashboardCard(
+                icon: Icons.monetization_on,
+                title: 'Transactions',
+              ),
+              DashboardCard(
+                icon: Icons.file_copy_sharp,
+                title: 'History',
+              ),
+              DashboardCard(
+                icon: Icons.money_rounded,
+                title: 'Payments',
+              ),
+              DashboardCard(
+                icon: Icons.settings,
+                title: 'Settings',
+              ),
 
-          ],
-        ),
-      ]),
+            ],
+          ),
+        ]),
+      ),
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
