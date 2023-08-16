@@ -19,6 +19,7 @@ class HeaderComponent extends StatelessWidget implements PreferredSizeWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             const SizedBox(
               height: 30,
             ),
@@ -39,7 +40,7 @@ class HeaderComponent extends StatelessWidget implements PreferredSizeWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 12,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),
             ),

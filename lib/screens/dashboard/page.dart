@@ -14,7 +14,7 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
   Widget build(BuildContext context) {
     const String title = "Quick Financials";
     return Scaffold(
-      appBar: const HeaderComponent(headerText: 'Financial CashExpress', hint: 'Dashboard',),
+      appBar: const HeaderComponent(headerText: 'Financial CashExpress', hint: "Chanda's Dashboard",),
 
 
        drawer: Drawer(
@@ -118,7 +118,7 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
               ),
               DashboardCard(
                 icon: Icons.file_copy,
-                title: 'My Profile',
+                title: 'Apply for Loan',
               ),
               DashboardCard(
                 icon: Icons.monetization_on,
@@ -139,6 +139,9 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
 
             ],
           ),
+              const SizedBox(
+                height: 10,
+              )
         ]),
       ),
       bottomNavigationBar:
