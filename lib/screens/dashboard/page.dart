@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:loan_mobile_app/constants/colors.dart';
 
+import '../widgets/dashboard.dart';
 import 'controller.dart';
 
 class DashboardDetails extends GetView<DashboardDetailsController> {
@@ -29,22 +30,38 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image(
-
-                      image: AssetImage('assets/images/user4.png'),
-
-                  width: 100, height: 100,),
+                    image: AssetImage('assets/images/user4.png'),
+                    width: 100,
+                    height: 100,
+                  ),
                   SizedBox(
                     height: 5,
                   ),
-                  Text('Chanda Chewe',style: TextStyle(fontSize: 16, color: Colors.white,fontWeight: FontWeight.w600),),
+                  Text(
+                    'Chanda Chewe',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                   SizedBox(
                     height: 5,
                   ),
-                  Text('chewec03@gmail.com',style: TextStyle(fontSize: 16, color: Colors.white,fontWeight: FontWeight.w600),),
+                  Text(
+                    'chewec03@gmail.com',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                   SizedBox(
                     height: 5,
                   ),
-                  Text('0973750029',style: TextStyle(fontSize: 16, color: Colors.white,fontWeight: FontWeight.w600))
+                  Text('0973750029',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600))
                 ],
               ),
             ),
@@ -78,7 +95,58 @@ class DashboardDetails extends GetView<DashboardDetailsController> {
           ],
         ),
       ),
-      body: const Center(),
+      body: Column(children: [
+        Container(
+          margin: const EdgeInsets.all(50),
+          child: const Text(
+            "Hi Chanda Chewe Welcome to the Clients Dashboard",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+          ),
+        ),
+
+        GridView.count(
+          shrinkWrap: true, // use it
+          crossAxisCount: 2,
+          children: [
+            DashboardCard(
+              image: 'assets/images/user1.png',
+              title: 'My Profile',
+            ),
+            DashboardCard(
+              image: 'assets/images/user1.png',
+              title: 'My Profile',
+            ),
+            DashboardCard(
+              image: 'assets/images/file1.jpg',
+              title: 'Loan Applications',
+            ),
+            DashboardCard(
+              image: 'assets/images/money1.png',
+              title: 'Transactions',
+            ),
+
+          ],
+        ),
+      ]),
+      bottomNavigationBar:
+          BottomNavigationBar(items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: "Home",
+          backgroundColor: primaryColor800,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.money),
+          label: "Loans",
+          backgroundColor: primaryColor800,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.monetization_on),
+          label: "transactions",
+          backgroundColor: primaryColor800,
+        ),
+      ]),
     );
   }
 }

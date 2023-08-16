@@ -16,33 +16,42 @@ class CardDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        children: [
-          Row(
+    return Padding(
+
+      padding: const EdgeInsets.all(10.0),
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
             children: [
-              Text(
-                title,
-                style: const TextStyle(fontSize: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                  Icon(cardLogo),
+                ],
               ),
-              Icon(cardLogo),
+              Text(
+                hint,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                bottomText,
+                style: const TextStyle(fontSize: 10),
+              )
             ],
           ),
-          Text(
-            hint,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            bottomText,
-            style: const TextStyle(fontSize: 10),
-          )
-        ],
+        ),
       ),
     );
   }
